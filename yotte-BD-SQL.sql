@@ -201,12 +201,12 @@ VALUES ('jdbc', 'JDBC', '12345678901234', 'empresa@email.com', 'senha123'),
 -- DADOS LOGIN DE ADMINISTRADOR
 INSERT INTO usuario (nome, email, senha, area, cargo, fk_empresa, fk_tipo_usuario)
 VALUES 
-	('brian', 'brian@.com.com', '1234', 'Engenharia', 'analista', 1, 2),
-    ('lira', 'lira@.com.com', '1234', 'Engenharia', 'analista', 1, 3),
-    ('Daniel', 'dan@.com.com', '1234', 'Engenharia', 'analista', 1, 3),
-    ('Pimentel', 'pi@.com.com', '1234', 'Engenharia', 'analista', 2, 2),
-    ('Lorena', 'lo@.com.com', '1234', 'Engenharia', 'analista', 2, 3),
-    ('Julia', 'ju@.com.com', '1234', 'Engenharia', 'analista', 2, 3);
+	('brian', 'brian@gmail.com', '1234', 'Engenharia', 'analista', 1, 2),
+    ('lira', 'lira@gmail.com', '1234', 'Engenharia', 'analista', 1, 3),
+    ('Daniel', 'daniel@gmail.com', '1234', 'Engenharia', 'analista', 1, 3),
+    ('Pimentel', 'pimentel@.gmail.com', '1234', 'Engenharia', 'analista', 2, 2),
+    ('Lorena', 'lorena@gmail.com', '1234', 'Engenharia', 'analista', 2, 3),
+    ('Julia', 'julia@gmail.com', '1234', 'Engenharia', 'analista', 2, 3);
 
 
 -- INSERT DOS TOKENS DE SEGURANÇA
