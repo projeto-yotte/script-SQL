@@ -229,18 +229,18 @@ VALUES
 -- INSERT DE INFORMAÇÕES DOS COMPONENTES
 INSERT INTO info_componente (qtd_cpu_logica, qtd_cpu_fisica, total)
 VALUES 
-    (null, null, 8123420000), -- maquina01 
-    (2, 2, null), -- maquina01
-    (null, null, 1073740000), -- maquina01
-    (null, null, 8123420000), -- maquina02
-    (2, 2, null), -- maquina02
-    (null, null, 1073740000), -- maquina02
-    (null, null, 8123420000), -- maquina03
-    (2, 2, null), -- maquina03
-    (null, null, 1073740000), -- maquina03
-    (null, null, 8123420000), -- maquina04
-    (2, 2, null), -- maquina04
-    (null, null, 1073740000); -- maquina04
+    (null, null, 8123420000),
+    (2, 2, null),
+    (null, null, 1073740000),
+    (null, null, 8123420000), 
+    (2, 2, null),
+    (null, null, 1073740000),
+    (null, null, 8123420000), 
+    (2, 2, null),
+    (null, null, 1073740000), 
+    (null, null, 8123420000),
+    (2, 2, null),
+    (null, null, 1073740000); 
     
 
 -- INSERT DOS TIPOS DE COMPONENTES
@@ -352,7 +352,7 @@ JOIN
 JOIN 
     usuario AS funcionario ON funcionario.id_usuario = maquina.fk_usuario
 JOIN 
-    dados_captura ON maquina.id_maquina = dados_captura.fk_componente -- Substitua maquina.fk_usuario pelo campo correto
+    dados_captura ON maquina.id_maquina = dados_captura.fk_componente 
 JOIN 
     alerta ON dados_captura.id_dados_captura = alerta.fk_dados_captura
 JOIN 
@@ -375,7 +375,7 @@ WITH DiferencaCapturas AS (
     JOIN componente ON dados_captura.fk_componente = componente.id_componente
     JOIN maquina ON componente.fk_maquina = maquina.id_maquina
     JOIN usuario ON maquina.fk_usuario = usuario.id_usuario
-    WHERE CONVERT(DATE, dados_captura.data_captura) = CONVERT(DATE, GETDATE()) -- Dados do dia de hoje
+    WHERE CONVERT(DATE, dados_captura.data_captura) = CONVERT(DATE, GETDATE())
     GROUP BY maquina.id_maquina, usuario.nome, usuario.id_usuario
 )
 SELECT
